@@ -49,9 +49,9 @@ Vue.component('paginate', Paginate);
 axios.defaults.baseURL = 'http://192.168.0.159/lara-vue-auth/public/api/';
 
 const router = new VueRouter({
-    mode: 'history', //removes # (hashtag) from url
-    base: '/lara-vue-auth/public/',
-    fallback: true, //router should fallback to hash (#) mode when the browser does not support history.pushState
+    // mode: 'history', //removes # (hashtag) from url
+    // base: '/lara-vue-auth/public/',
+    // fallback: true, //router should fallback to hash (#) mode when the browser does not support history.pushState
     routes: [{
         path: '/',
         name: 'home',

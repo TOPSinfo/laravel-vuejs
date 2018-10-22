@@ -39,13 +39,13 @@
                     </tr>
                     <tr>
                         <td colspan="100%">
-                            <paginate
+                            <!-- <paginate
                               :page-count="20"
                               :prev-text="'Prev'"
                               :next-text="'Next'"
                               :container-class="'pagination'"
                               :first-last-button="true">
-                            </paginate>
+                            </paginate> -->
                         </td>
                     </tr>
                     </tbody>

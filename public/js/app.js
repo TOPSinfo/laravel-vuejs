@@ -146,9 +146,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('paginate', __WEBPACK_IMPO
 __WEBPACK_IMPORTED_MODULE_3_axios___default.a.defaults.baseURL = 'http://192.168.0.159/lara-vue-auth/public/api/';
 
 var router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
-    mode: 'history', //removes # (hashtag) from url
-    base: '/lara-vue-auth/public/',
-    fallback: true, //router should fallback to hash (#) mode when the browser does not support history.pushState
+    // mode: 'history', //removes # (hashtag) from url
+    // base: '/lara-vue-auth/public/',
+    // fallback: true, //router should fallback to hash (#) mode when the browser does not support history.pushState
     routes: [{
         path: '/',
         name: 'home',
@@ -24977,24 +24977,7 @@ var render = function() {
                   ])
                 }),
                 _vm._v(" "),
-                _c("tr", [
-                  _c(
-                    "td",
-                    { attrs: { colspan: "100%" } },
-                    [
-                      _c("paginate", {
-                        attrs: {
-                          "page-count": 20,
-                          "prev-text": "Prev",
-                          "next-text": "Next",
-                          "container-class": "pagination",
-                          "first-last-button": true
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ])
+                _vm._m(1)
               ],
               2
             )
@@ -25023,6 +25006,12 @@ var staticRenderFns = [
         _c("th", { attrs: { width: "100" } }, [_vm._v(" ")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [_c("td", { attrs: { colspan: "100%" } })])
   }
 ]
 render._withStripped = true
