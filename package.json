@@ -26,6 +26,8 @@
     "dependencies": {
         "@websanova/vue-auth": "^2.21.14-beta",
         "css-loader": "^1.0.0",
-        "vue-style-loader": "^4.1.2"
+        "vee-validate": "^2.1.0-beta.11",
+        "vue-style-loader": "^4.1.2",
+        "vuejs-paginate": "^2.0.1"
     }
 }

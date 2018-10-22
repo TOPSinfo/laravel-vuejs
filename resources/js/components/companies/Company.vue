@@ -4,6 +4,9 @@
             <router-link :to="{name: 'createCompany'}" class="btn btn-success">Create new company</router-link>
         </div>
 
+        <!-- Outlet for children routes -->
+        <router-view></router-view>
+
         <div class="panel panel-default">
             <div class="panel-heading">Companies list</div>
             <div class="panel-body">
@@ -32,6 +35,17 @@
                                v-on:click="deleteEntry(company.id, index)">
                                 Delete
                             </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="100%">
+                            <paginate
+                              :page-count="20"
+                              :prev-text="'Prev'"
+                              :next-text="'Next'"
+                              :container-class="'pagination'"
+                              :first-last-button="true">
+                            </paginate>
                         </td>
                     </tr>
                     </tbody>
