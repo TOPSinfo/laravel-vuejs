@@ -1,33 +1,17 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-// require('./bootstrap');
-
-// window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-// const app = new Vue({
-//     el: '#app'
-// });
-
-
 import Vue from 'vue';
-import VeeValidate from 'vee-validate';
 import VueRouter from 'vue-router';
+
+// VeeValidate - Validate HTML inputs and Vue components, generate localized errors
+import VeeValidate from 'vee-validate';
+
+// Axios - a promise-based HTTP client
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+
+// Paginate - component to make pagination
 import Paginate from 'vuejs-paginate';
+
+// Vue Components
 import App from './App.vue';
 import Dashboard from './components/Dashboard.vue';
 import Home from './components/Home.vue';
@@ -35,7 +19,7 @@ import Register from './components/Register.vue';
 import Login from './components/Login.vue';
 import Company from './components/companies/Company.vue';
 import CompaniesCreate from './components/companies/CompaniesCreate.vue';
-// import CompaniesEdit from './components/companies/CompaniesEdit.vue';
+import CompaniesEdit from './components/companies/CompaniesEdit.vue';
 import NotFound from './components/NotFound.vue';
 
 Vue.use(VeeValidate);
@@ -84,23 +68,6 @@ const router = new VueRouter({
         meta: {
             auth: true
         },
-        // children: [
-        //     {
-        //         path: 'create', 
-        //         name: 'createCompany',
-        //         component: CompaniesCreate,
-        //         meta: {
-        //             auth: true
-        //         }
-        //     },{
-        //         path: 'edit/:id', 
-        //         name: 'editCompany',
-        //         component: CompaniesCreate, 
-        //         meta: {
-        //             auth: true
-        //         }
-        //     },
-        // ]
     },
     {
         path: '/company/create', 
@@ -122,6 +89,7 @@ const router = new VueRouter({
     ]
 });
 
+// @websanova/vue-auth - This is the library responsible for handling authentication on the client side.
 Vue.router = router
 Vue.use(require('@websanova/vue-auth'), {
    auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),

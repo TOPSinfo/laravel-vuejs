@@ -17,7 +17,6 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        // return $user = User::find(Auth::user()->id);
         return Company::all();
     }
 

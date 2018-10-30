@@ -33,8 +33,12 @@
               email: app.email,
               password: app.password
             }, 
-            success: function () {},
-            error: function () {},
+            success: function (resp) {
+                console.log(resp);
+            },
+            error: function (resp) {
+                app.error = true;
+            },
             rememberMe: true,
             redirect: '/dashboard',
             fetchUser: true,
