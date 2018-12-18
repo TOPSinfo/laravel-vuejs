@@ -1631,7 +1631,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('paginate', __WEBPACK_IMPO
 // const Register = () => System.import('./components/Register.vue');
 // const Login = () => System.import('./components/Login.vue');
 
-__WEBPACK_IMPORTED_MODULE_3_axios___default.a.defaults.baseURL = 'http://192.168.0.159/lara-vue-auth/public/api/';
+__WEBPACK_IMPORTED_MODULE_3_axios___default.a.defaults.baseURL = '/topsgit/laravel-vuejs/public/api/';
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     // mode: 'history', //removes # (hashtag) from url

@@ -30,7 +30,7 @@ Vue.component('paginate', Paginate);
 // const Register = () => System.import('./components/Register.vue');
 // const Login = () => System.import('./components/Login.vue');
 
-axios.defaults.baseURL = 'http://192.168.0.159/lara-vue-auth/public/api/';
+axios.defaults.baseURL = '/topsgit/laravel-vuejs/public/api/';
 
 const router = new VueRouter({
     // mode: 'history', //removes # (hashtag) from url
