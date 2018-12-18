@@ -40,7 +40,7 @@
                 app.error = true;
             },
             rememberMe: true,
-            redirect: '/',
+            redirect: '/company',
             fetchUser: true,
         });       
       },
