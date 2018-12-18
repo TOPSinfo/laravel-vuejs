@@ -7,7 +7,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">Create new company</div>
             <div class="panel-body">
-                <form v-on:submit="saveForm()">
+                <form @submit.prevent="saveForm()">
                     <div class="row">
                         <div class="col-xs-12 form-group">
                             <label class="control-label">Company name</label>
@@ -37,8 +37,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 form-group">
+                        <div class="col-xs-12 form-group" v-if="!companyId">
                             <button class="btn btn-success" :disabled="!isFormValid">Create</button>
+                        </div>
+                        <div class="col-xs-12 form-group" v-if="companyId">
+                            <button class="btn btn-success" :disabled="!isFormValid">Update</button>
                         </div>
                     </div>
                 </form>
@@ -82,7 +85,6 @@
         },
         methods: {
             saveForm() {
-                event.preventDefault();
                 var app = this;
                 var newCompany = app.company;
                 
